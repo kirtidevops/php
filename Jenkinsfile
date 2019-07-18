@@ -26,7 +26,7 @@ node {
 		*/
 	    docker.withRegistry('https://549942532493.dkr.ecr.us-east-1.amazonaws.com', 'ecr:us-east-1:ecr-credentials'){
        
-		app.push("${env.BUILD_NUMBER}")
+		app.push("spinnakertest{env.BUILD_NUMBER}")
             app.push("latest")
             } 
                 echo "Trying to Push Docker Build to dockerhub"
