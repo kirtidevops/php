@@ -24,7 +24,7 @@ node {
         /* 
 			You would need to first register with DockerHub before you can push images to your account
 		*/
-        withDockerRegistry(credentialsId: 'docker-hub-credentials', url: 'https://docker.io') {
+        withDockerRegistry(credentialsId: 'docker-hub-credentials', url: 'docker.io') {
        
 		app.push("${env.BUILD_NUMBER}")
             app.push("latest")
