@@ -25,13 +25,9 @@ node {
 			You would need to first register with DockerHub before you can push images to your account
 		*/
 	    docker.withRegistry('https://549942532493.dkr.ecr.us-east-1.amazonaws.com', 'ecr:us-east-1:ecr-credentials')
-	    docker tag kittu0410/spinnaker:latest 549942532493.dkr.ecr.us-east-1.amazonaws.com/spinnakertest:latest
-
 {
-		  
-       
-           docker push 549942532493.dkr.ecr.us-east-1.amazonaws.com/spinnakertest:latest
-          
+		  docker.image('kittu0410/spinnaker').push('latest')
+                 
             } 
                 echo "Trying to Push Docker Build to dockerhub"
     }
